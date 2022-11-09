@@ -1,9 +1,6 @@
 document.querySelector(".search-button").addEventListener("click", async function(){
     try{
     const inputKeyword = document.querySelector(".input-keyword");
-    if (inputKeyword.value === ""){
-        throw new Error("Masukan nama film terlebih dahulu.")
-    }
     const movies = await getMovies(inputKeyword.value);
     console.log(movies)
     updateUI(movies);
